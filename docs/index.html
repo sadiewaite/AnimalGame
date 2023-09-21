@@ -47,7 +47,7 @@
                 </button>
               </span>
               <span style="margin-left: 1rem">
-                <i id="goodguess" class="fa-solid fa-baby animate__animated" style="font-size: 5em; color: darkblue"></i>
+                <i id="goodguess" class="fa-regular fa-futbol animate__animated" style="font-size: 5em; color: darkblue"></i>
               </span>
             </div>
           </form>
@@ -146,9 +146,9 @@
       if (formProps.choicesRadio === formProps.correctAnimal) {
           // alert("Right!");
           const goodguessEl = document.getElementById("goodguess");
-          goodguessEl.classList.add("animate__wobble");
+          goodguessEl.classList.add("animate__bounce");
           setTimeout(function() {
-              goodguessEl.classList.remove("animate__wobble");
+              goodguessEl.classList.remove("animate__bounce");
           }, 500);
       } else {
           alert("Sorry wrong answer!");
