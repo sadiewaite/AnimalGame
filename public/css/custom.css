@@ -1,0 +1,25 @@
+.dropdown-menu {
+    animation: 0.5s slideup;
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(10%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    background-color: lightpink !important;
+}
+
+.navbar .nav-item .nav-link, .navbar .navbar-brand {
+    color: #117edd !important;
+}
+
+.navbar .nav-item .nav-link.active {
+    font-weight: bolder !important;
+}
