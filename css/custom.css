@@ -23,3 +23,8 @@
 .navbar .nav-item .nav-link.active {
     font-weight: bolder !important;
 }
+
+#animals-to-count {
+    font-size: xxx-large;
+    color: #117edd !important;
+}
