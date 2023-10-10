@@ -99,11 +99,7 @@
         <div id="invisible-count" class="container d-flex justify-content-center">
             <div class="container card">
                 <h1>Count the animals!</h1>
-                <div id="animals-to-count">
-                    <span class="fa fa-hippo" />
-                    <span class="fa fa-hippo" />
-                    <span class="fa fa-hippo" />
-                </div>
+                <div id="animals-to-count" data-animals="0"></div>
                 <div id="numpad">
                     <div class="container" style="background-color:white;">
                         <div class="btn-group-vertical ml-10 mt-10 col-md-4 offset-md-4 p-3" role="group">
@@ -125,7 +121,7 @@
                             </div>
                             <div class="btn-group">
                                 <button type="button" class="remove-btn btn btn-outline-danger py-6">&lt; Remove</button>
-                                <button type="button" class="number-btn btn btn-outline-secondary py-6">0</button>
+                                <button type="button" class="number-btn btn btn-outline-secondary py-6" data-number="0">0</button>
                             </div>
                             <button id="guess-count" type="button" class="submit-btn btn btn-outline-success">Okay</button>
                         </div>
