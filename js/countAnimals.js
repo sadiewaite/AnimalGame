@@ -1,5 +1,23 @@
 const ANIMAL_ICONS = [
-    "fa-solid fa-hippo"
+    "fa-hippo",
+    "fa-otter",
+    "fa-paw",
+    "fa-dog",
+    "fa-cow",
+    "fa-fish",
+    "fa-dragon",
+    "fa-kiwi-bird",
+    "fa-worm",
+    "fa-spider",
+    "fa-shrimp",
+    "fa-mosquito",
+    "fa-locust",
+    "fa-horse",
+    "fa-frog",
+    "fa-fish-fins",
+    "fa-dove",
+    "fa-crow",
+    "fa-cat",
 ]
 
 class NumpadEvent {
@@ -51,11 +69,15 @@ const clearBtnClickHandler = e => {
     handleNumpadEvent(evt);
 };
 
+const randomAnimal = () => {
+    return ANIMAL_ICONS[Math.floor(Math.random() * ANIMAL_ICONS.length)];
+};
+
 const randomNumberOfAnimals = () => {
     return Math.ceil(Math.random() * 10);
 };
 
-const displayAnimalIcons = (numberOfAnimals) => {
+const displayAnimalIcons = (numberOfAnimals, animal) => {
     const el = document.getElementById("animals-to-count");
     el.innerHTML = "";
     for (let i = 0; i < numberOfAnimals; i++) {
@@ -63,7 +85,7 @@ const displayAnimalIcons = (numberOfAnimals) => {
         span.classList.add("p-3");
         span.classList.add("fa");
         span.classList.add("animate__animated")
-        span.classList.add("fa-hippo");
+        span.classList.add(animal);
         el.appendChild(span);
         span.classList.add("animate__slideInDown");
     }
@@ -162,7 +184,8 @@ const handleNumpadEvent = numpadEvent => {
 
 const newGame = () => {
     const numberOfAnimals = randomNumberOfAnimals();
-    displayAnimalIcons(numberOfAnimals);
+    const animal = randomAnimal();
+    displayAnimalIcons(numberOfAnimals, animal);
     setCorrectAnimalCount(numberOfAnimals);
     clearBtnClickHandler({});
 };
